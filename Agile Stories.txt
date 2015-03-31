@@ -1,2 +1,62 @@
 Agile Stories
 
+#6 As someone interested in the iRobot, I want information about the logistics and maintenance and the
+   pricing, so that I can make an informed decision on this product
+	a. Story Point  - 
+	b. Priority	-
+	c. Tasks	- Create a maintenance and logisitics plan that detail when 
+			  and how the iRobot will be maintained. Also include pricing
+			  options for the reader of the pamphlet to review.
+	d. Done When	- A reasonably detailed plan for the maintenance and its pricing has been
+			  established, one that would satisfy a consumer. This should include:
+				1: Replacement parts
+				2: Having the iRobot checked regularly by a mechanic
+
+#7 As someone interesting in purchasing iRobot, I want a guarantee policy, so that if it breaks or I am 
+   unsatisfied, I can return it
+	a. Story Point	-
+	b. Priority	-
+	c. Tasks	- Formulate a guarantee policy that provides reimbursement or a replacement
+			  if the current iRobot breaks, and also provides a refund if the user is
+			  not satisfied
+	d. Done When	- A guarantee for reimbursement or replacement has been written in case of:
+				1: The iRobot breaks
+				2: The user is not satisfied
+
+#8 As the produces of the iRobot, I want testimonials in the pamphlet, so that potential customers can see 
+   the positive experiences of other consumers and invest in our product
+	a. Story Point	-
+	b. Priority	-
+	c. Tasks	- Show positive testimonials to the viewer of the pamphlet
+			- Include the option to add additional testimonials
+			- Have the testimonials persist between executions
+	d. Done When	- Several positive testimonials of the iRobot product have been written and are
+			  on the online pamphlet
+			- Additional testimonials can be easily added
+			- The additional testimonials are saved
+
+#9 As a viewer of the pamphlet, I want contance information, so that I can contact the company if I am
+   interested in their product
+	a. Story Point	-
+	b. Priority	-
+	c. Tasks	- Provide contanct information as well as methods to contact the company
+	d. Done When	- Phone number is provided
+			- The mailing address is provided
+			- The email is provided
+			- A customer can leave a message on the pamphlet with their email or phone number
+			  and can expect to get a response
+
+#10 As the owner of the iRobot, I want a list of companies that have already received the pamphlet, their
+    level of interest in the product, and how beneficial they would be to have as a customer, so that I
+    can know how to market the product
+	a. Story Point 	- 
+	b. Priority	-
+	c. Tasks	- Have a file containing:
+				1: The customer
+				2: Their level of interest
+				3: How beneficial to the company it would be to have them
+			- Read in  from the file
+			- Track which companies have already received the pamphlet
+	d. Done When	- The program has all the appropriate information of the customers, can display
+			  the information, and can display which companies have already received the 
+			  pamphlet
