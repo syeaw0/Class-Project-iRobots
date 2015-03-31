@@ -60,3 +60,79 @@ Agile Stories
 	d. Done When	- The program has all the appropriate information of the customers, can display
 			  the information, and can display which companies have already received the 
 			  pamphlet
+
+11. As an administrator, I would like to be able to update the customer list, so that I can change customer 
+    information such as changing the rating and “key” field.
+	a. Story Point -  6
+	b. Priority - 10
+	c. Tasks - Make options so that the administrator can choose which customer the admin would like to change 
+		   information about.
+		 - Make options so that the administrator can choose what type of information is to be changed.
+		 - Update the information accurately.
+	d. Done When - Allows the administrator to update information about a certain customer. 
+		Always make sure that the customer name is unique and that there are no duplicates.
+		The customer list is updated to hold correct information about a customer.
+		Make sure that only an administrator can update the customer list and not the customer.
+		
+12. As an administrator, I want the ability add and delete customers, so that only I can keep an accurate list 
+    of all the customers for iRobotsTheBomb.
+	a. Story Point 	- 5
+	b. Priority 	- 8
+	c. Tasks      	- There is a default special login that is provided for only administrators that gives the 
+		  	  administrator the option to add or delete a customer.
+			- The administrator provides information about the customer, he/she would like to add.
+			- This includes Name, Address, City, State, ZipCode, interest level in company, and
+			  whether or not the customer is a “key” customer.
+			- Check to make sure that the customer name is unique.
+			- Every time a new customer is added or deleted, the list is accurate and well maintained.
+	d. Done When 	- The Administrator is able to specially login and see information about company that 
+			  should not be viewed by the customers.
+			- The administrator has the ability to add a customer.
+			- The administrator has the ability to delete a customer.
+			- To add a customer the administrator must provide valid information about a customer 
+			  (Name, Address, City, State, ZipCode, interest level in company, and whether or not 
+			  the customer is a “key” customer).
+			- To delete a customer, the administrator must provide a name. 
+			- The customer list must be accurate after each added or deleted customer.
+			- The customer list must be accurate even after the program is ended and restarted.
+			- If the administrator is not able to add a customer, the admin must be notified why.
+			- If the administrator cannot delete a customer, the admin must be notified why.
+			
+13. As a perspective customer, I would like to be able to request a copy of the pamphlet, so that I can decide 
+    whether or not I would like to purchase products from the company.
+	a. Story Point -  3
+	b. Priority - 7
+	c. Tasks - Make an option for perspective customers where they can contact the company.
+	  	 - The perspective customer will have to fill out a form indicating the name, address, city, 
+	  	   state, zip code and interest level in the company.
+		 - Notify the perspective customer that the pamphlet has been sent.
+	d. Done When - The perspective customer is able to request a pamphlet.
+		     - The perspective customer will be notified when the pamphlet will be mailed to them.
+		     - The perspective customer will be added the customer list once the pamphlet is sent.
+
+14. As an administrator, I would like the customer list to be persistent between executions, so that I can 
+    always have an updated and accurate list of customers. 
+	a. Story Point -  6
+	b. Priority - 3
+	c. Tasks - Make sure after every end of an execution the file of all the customers is updated and saved.
+		 - When executing the program again, automatically read the file so that it provides an 
+		   updated customer list.
+	d. Done When - After executing the program, the customer list should be updated on the file automatically.
+	 	     - When executing the program, the program will automatically grab and retrieve all 
+	 	       the customers from a designated customer file. 
+	 	       
+15. As a customer, I would like option to order one or more iRobot devices, so that I purchase everything I 
+    need for my company/corporation. 
+	a. Story Point -  5
+	b. Priority - 6
+	c. Tasks - Allow the ability for the customer to purchase an iRobot. The customer will be able to 
+		   choose the product and the quantity of the item.
+		 - After adding a purchase the customer will be asked if he/she would like to purchase more. 
+		   If the customer is done purchasing, a receipt will be printed out for the user. 
+		   Otherwise, the customer will be able to purchase another product.
+	d. Done When - The customer should be a valid customer.
+	- The customer should be able to choose a iRobot to purchase and if the iRobot does not exist, 
+	  the customer will be notified.
+	- The customer should be able to choose as many iRobots he/she would like to purchase.
+	- When done purchasing, the purchase will be added to the purchase list.
+	- The customer will have received an accurate total of how much the iRobots cost.
