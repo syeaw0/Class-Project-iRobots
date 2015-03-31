@@ -46,3 +46,17 @@ Agile Stories
 			- A customer can leave a message on the pamphlet with their email or phone number
 			  and can expect to get a response
 
+#10 As the owner of the iRobot, I want a list of companies that have already received the pamphlet, their
+    level of interest in the product, and how beneficial they would be to have as a customer, so that I
+    can know how to market the product
+	a. Story Point 	- 
+	b. Priority	-
+	c. Tasks	- Have a file containing:
+				1: The customer
+				2: Their level of interest
+				3: How beneficial to the company it would be to have them
+			- Read in  from the file
+			- Track which companies have already received the pamphlet
+	d. Done When	- The program has all the appropriate information of the customers, can display
+			  the information, and can display which companies have already received the 
+			  pamphlet
