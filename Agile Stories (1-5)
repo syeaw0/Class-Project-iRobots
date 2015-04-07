@@ -4,9 +4,9 @@ Agile Stories #(1-5)
 
 Story #1:  As an administrator, I want to have access to a help menu so that I can get help using the online pamphlet.
 Detailed Description:  At any point in the online pamphlet, there should be an option to go to the help menu.  The help menu will be easy to use and intuitive.  This help menu will let the user choose between help topics or go back to the previous menu.  When the help topic is chosen, the appropriate help will be displayed.  After the help is displayed, the previous menu will be displayed.
-Story Point Estimation:  (1-10) 
-Priority: (1-10)
-Assignee: Dylon Dickinson
+Story Point Estimation:  (1-10) ???
+Priority: (1-10) ???
+Assignee: ???
 List of Tasks and Tests:
 1.	Write a help page for each help topic.
 2.	Add a help option to all existing menus that loop when help is selected.
@@ -18,9 +18,9 @@ Definition of Done:  All available menus will have the help option.  The help me
 
 Story #2:  As a potential customer, I want to see an honest sales pitch that highlights the features of each product that I would deem important so that I might make an informed purchasing decision.
 Detailed Description:  On the homepage of the online pamphlet, the sales pitch will be displayed.  It will be carefully written to catch the attention of customers and potential customers alike.  The sales pitch will contain pertinent information that is important to a customer.  The sales pitch will show how iRobotsTheBomb robots stand out from the competition.
-Story Point Estimation:  (1-10) 
-Priority: (1-10)
-Assignee: Dylon Dickinson
+Story Point Estimation:  (1-10) ??? 
+Priority: (1-10) ???
+Assignee: ???
 List of Tasks and Tests:
 1.	Expertly craft a sales pitch that will catch the attention of the target market.
 2.	Write code to output the sales pitch on the first page of the online pamphlet.
@@ -30,9 +30,9 @@ Definition of Done: The sales pitch must be convincing and straight forward.  Al
 
 Story #3:  As a potential customer, I want to know the physical environments supported so that I can purchase the correct robot and utilize the robot as intended.
 Detailed Description: On a page in the pamphlet, a list of physical environments should exist that allows the customer or potential customer to know which robots support which environments.  The list of environments should be easy to understand and sorted by robot type.  The list should be displayed before the customer has the chance to purchase a robot, so that they can make an informed decision.
-Story Point Estimation:  (1-10) 
-Priority: (1-10)
-Assignee: Dylon Dickinson
+Story Point Estimation:  (1-10)  ???
+Priority: (1-10)  ???
+Assignee: ???
 List of Tasks and Tests:
 1.	Write a list of physical environments supported, sorted by robot type.
 2.	Write code to output the list.
@@ -42,9 +42,9 @@ Definition of Done: The list will be easy to understand and approved by all Scru
 
 Story #4:  As a potential customer, I want to know the concept of operations of each robot, so I can use my robot to its full potential and minimize damage caused by improper use.
 Detailed Description:  There should be a concept of operations for each robot for sale.  The description should precisely what the robot does and how it does it.  The description should be understandable to customers who have no technical knowledge about the robot.  The concept of operations should describe the different functions of each robot.  The concept of operations should be displayed before the customer can purchase a robot.
-Story Point Estimation:  (1-10) 
-Priority: (1-10)
-Assignee: Dylon Dickinson
+Story Point Estimation:  (1-10)  ???
+Priority: (1-10)  ??
+Assignee: ???
 List of Tasks and Tests:
 1.	Write a paragraph for each robot about the concept of operations.
 2.	Write code to output the concept of operations.
@@ -54,9 +54,9 @@ Definition of Done: The concept of operations will be easy to understand and app
 
 Story #5:  As a potential customer, I want to know the robot options available and the price of each robot, so I can know if I can afford the robot that I need.
 Detailed Description: On a page in the pamphlet, a list of 3 available robots for purchase will be displayed with the corresponding price.  The list of robots with prices should be easy to understand and sorted by robot type.  The list should be displayed before the customer has the chance to purchase a robot, so that they can make an informed decision.
-Story Point Estimation:  (1-10) 
-Priority: (1-10)
-Assignee: Dylon Dickinson
+Story Point Estimation:  (1-10)  ???
+Priority: (1-10)   ???
+Assignee: ???
 List of Tasks and Tests:
 5.	Write a list of robots available for purchase and their current prices
 6.	Write code to output the list.
