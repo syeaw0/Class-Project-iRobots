@@ -111,8 +111,6 @@ void Login::NewAccount(string outputFile)
 	// CHECK IF CUSTOMER USERNAMES ARE TAKEN
 	while(index < size)
 	{
-		cout << customerInfo[index].username << "==" << login.username << endl;
-
 		if(customerInfo[index].username == login.username)
 		{
 			throw UsernameTaken();
@@ -130,6 +128,57 @@ void Login::NewAccount(string outputFile)
 	cout << "\n Your new password is " << login.password << "!\n\n";
 
 	customerInfo.push_back(login);
+
+	Save(outputFile);
+}
+
+// Deletes a user account
+// Throws InvalidUsername exception
+void Login::DeleteAccount(string outputFile)
+{
+	// VARIABLE DECLARATIONS
+	int    index;
+	int    size;
+	bool   found;
+	string username;
+
+	// VARIABLE INITIALIZATIONS
+	index = 0;
+	size  = signed(customerInfo.size());
+	found = false;
+	cout << "Please enter the username of an account: ";
+	getline(cin, username);
+	cout << endl;
+
+	// CHECK THAT THE GIVEN USERNAME IS NOT THE ADMIN USERNAME
+	if(username == adminInfo.username)
+	{
+		throw InvalidUsername();
+	}
+
+	// SEARCH FOR A MATCHING CUSTOMER USERNAME
+	while(index < size && !found)
+	{
+		if(username == customerInfo[index].username)
+		{
+			found = true;
+		}
+		else
+		{
+			index++;
+		}
+	}
+
+	// IF NO USERNAME WAS FOUND, THROW AN "InvalidUsername" EXCEPTION
+	if(!found)
+	{
+		throw InvalidUsername();
+	}
+
+	// DELETE ACCOUNT
+	customerInfo.erase(customerInfo.begin() + index);
+
+	cout << username << "\'s account has been deleted!\n\n";
 
 	Save(outputFile);
 }

@@ -66,6 +66,7 @@ public:
 											// passwords from a file
 	void NewAccount(string outputFile);		// Creates a new account
 											// and saves it to a file
+	void DeleteAccount(string outputFile);	// Deletes a user account
 
 	// ACCESSORS
 	User UserLogin()const;					// Logs the user in as a
