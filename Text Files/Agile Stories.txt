@@ -198,3 +198,31 @@ Definition of Done: The list will be easy to understand and approved by all Scru
 	- The customer should be able to choose as many iRobots he/she would like to purchase.
 	- When done purchasing, the purchase will be added to the purchase list.
 	- The customer will have received an accurate total of how much the iRobots cost.
+
+16. As an administrator, I want sole access to customer data.
+	a. Story Point - 
+	b. Priority - 
+	c. Tasks - asdf
+		 - asdf
+		 -
+	d. Done When - 
+	
+17. As an administrator, I want to keep track of whether or not customers have received a pamphlet or not.
+	a. Story Point - 
+	b. Priority - 
+	c. Tasks - 
+	d. Done When - 
+	
+18. As an administrator, I want to be able to view a list of iRobots customers.
+Print customer list (admin only) 
+	a. Story Point - 
+	b. Priority - 
+	c. Tasks - 
+	d. Done When - 
+	
+19. As an administrator, I want to be able to view a list of key iRobots customers.
+Print key customer list (admin only)
+	a. Story Point - 
+	b. Priority - 
+	c. Tasks - 
+	d. Done When - 
