@@ -52,23 +52,33 @@ private:
 	vector<LoginInfo> customerInfo;	// A vector containing the usernames
 									// and passwords of all customers
 
-	// EXCEPTION CLASSES
-	class CorruptFile{};
-
+	/*PRIVATE METHODS*/
+	// MUTATORS
+	void Save(string outputFile);	// Saves the login information by
+									// writing it to the input file
 public:
 	/*METHODS*/
 	Login();		// Default Constructor
 	~Login();		// Destructor
 
 	// MUTATORS
-	void InitializeInfo(ifstream& inFile);	// Reads in the usernames and
+	void InitializeInfo(string inputFile);	// Reads in the usernames and
 											// passwords from a file
-	void NewAccount();						// Creates a new account
+	void NewAccount(string outputFile);		// Creates a new account
 											// and saves it to a file
 
 	// ACCESSORS
-	User UserLogin();						// Logs the user in as a
+	User UserLogin()const;					// Logs the user in as a
 											// guest, customer, or admin
+
+
+	// EXCEPTION CLASSES
+	class CorruptFile{};		// An exception for if the file is not found
+	class InvalidPassword{};	// For when the user's password does not
+								// match their username
+	class InvalidUsername{};	// For when the entered username is not found
+	class UsernameTaken{};		// For if a username has been taken when
+								// creating a new account
 };
 
 #endif /* LOGIN_H_ */
