@@ -97,7 +97,7 @@ Definition of Done: The list will be easy to understand and approved by all Scru
 			- Additional testimonials can be easily added
 			- The additional testimonials are saved
 
-#9 As a viewer of the pamphlet, I want contance information, so that I can contact the company if I am
+#9 As a viewer of the pamphlet, I want contact information, so that I can contact the company if I am
    interested in their product
 	a. Story Point	- 2
 	b. Priority	- 2
@@ -199,13 +199,14 @@ Definition of Done: The list will be easy to understand and approved by all Scru
 	- When done purchasing, the purchase will be added to the purchase list.
 	- The customer will have received an accurate total of how much the iRobots cost.
 
-16. As an administrator, I want sole access to customer data.
+16. As an administrator, I want sole access to all customer data.
 	a. Story Point - 
 	b. Priority - 
 	c. Tasks - asdf
 		 - asdf
 		 -
-	d. Done When - 
+	d. Done When - Customers cannot access any customer data besides their own.
+	 	     - The administrator can print, add, delete, modify customer data.
 	
 17. As an administrator, I want to keep track of whether or not customers have received a pamphlet or not.
 	a. Story Point - 
