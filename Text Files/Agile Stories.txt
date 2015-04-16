@@ -208,12 +208,12 @@ Definition of Done: The list will be easy to understand and approved by all Scru
 		 - Create a logout option
 	d. Done When - Customers cannot print, add, delete, modify any customer data besides their own.
 			There should not be interface options to perform these tasks.
-	 	     - The administrator can print, add, delete, modify customer data.
+	 	     - The administrator can print, add, delete, modify customer data (#12).
 	
 17. As an administrator, I want to keep track of whether or not customers have received a pamphlet or not.
 	a. Story Point - 3
 	b. Priority - 4
-	c. Tasks - Mark in the customer file whether or not customers have received a pamphlet (see 10).
+	c. Tasks - Mark in the customer file whether or not customers have received a pamphlet (#10).
 		 - Allow an admin to lookup received/not-received by name.
 		 - Allow an admin to display two tables - one listing received, one not received.
 		 - Allow an admin to manually change whether or not a customer has received a pamphlet.
