@@ -97,7 +97,7 @@ Definition of Done: The list will be easy to understand and approved by all Scru
 			- Additional testimonials can be easily added
 			- The additional testimonials are saved
 
-#9 As a viewer of the pamphlet, I want contance information, so that I can contact the company if I am
+#9 As a viewer of the pamphlet, I want contact information, so that I can contact the company if I am
    interested in their product
 	a. Story Point	- 2
 	b. Priority	- 2
@@ -199,30 +199,49 @@ Definition of Done: The list will be easy to understand and approved by all Scru
 	- When done purchasing, the purchase will be added to the purchase list.
 	- The customer will have received an accurate total of how much the iRobots cost.
 
-16. As an administrator, I want sole access to customer data.
-	a. Story Point - 
-	b. Priority - 
-	c. Tasks - asdf
-		 - asdf
-		 -
-	d. Done When - 
+16. As an administrator, I want sole access to all customer data.
+	a. Story Point - 5
+	b. Priority - 8
+	c. Tasks - Create a login interface and a method for managing different admin or customer accounts.
+		 - Change the main interface (print, add, delete) depending on the user type.
+		 - The login should distinguish between admins, customers, and new customers.
+		 - Create a logout option
+	d. Done When - Customers cannot print, add, delete, modify any customer data besides their own.
+			There should not be interface options to perform these tasks.
+	 	     - The administrator can print, add, delete, modify customer data (#12).
 	
 17. As an administrator, I want to keep track of whether or not customers have received a pamphlet or not.
-	a. Story Point - 
-	b. Priority - 
-	c. Tasks - 
-	d. Done When - 
-	
+	a. Story Point - 3
+	b. Priority - 4
+	c. Tasks - Mark in the customer file whether or not customers have received a pamphlet (#10).
+		 - Allow an admin to lookup received/not-received by name.
+		 - Allow an admin to display two tables - one listing received, one not received.
+		 - Allow an admin to manually change whether or not a customer has received a pamphlet.
+	d. Done When - An administrator can lookup a customer and see whether or not they have received 
+			a pamphlet.
+		     - An administrator can print a list showing customers who have received or who 
+		     	have not received a pamphlet.
+		     - The lists/lookup are accurate and sorted by name.
+		     - An administrator can manually change the 'received' status of a customer.
+
 18. As an administrator, I want to be able to view a list of iRobots customers.
-Print customer list (admin only) 
-	a. Story Point - 
-	b. Priority - 
-	c. Tasks - 
-	d. Done When - 
+	a. Story Point - 5
+	b. Priority - 6
+	c. Tasks - Allow an admin to display a table with iRobots customers.
+		 - display other customer information like the city and level of interest.
+		 - Sort the table by name. 
+		 - Be able to lookup a single customer.
+	d. Done When - An admin can quickly display a table of all customers and customer data.
+		     - The table is aesthetic and sorted by name.
+		     - An admin can lookup the data of a single customer.
 	
 19. As an administrator, I want to be able to view a list of key iRobots customers.
-Print key customer list (admin only)
-	a. Story Point - 
-	b. Priority - 
-	c. Tasks - 
-	d. Done When - 
+	a. Story Point - 6
+	b. Priority - 6
+	c. Tasks - Allow an admin to display a table with key iRobots customers.
+		 - Allow an admin to display a table with non-key iRobots customers.
+		 - Sort the table by name.
+	d. Done When - An admin can quickly display a table of all key customers.
+		     - An admin can display a table of non-key customers.
+		     - An admin can lookup the 'key' status of any customer.
+		     - Tables and displays are aesthetic and sorted.
