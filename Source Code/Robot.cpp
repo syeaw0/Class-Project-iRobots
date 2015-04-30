@@ -1,9 +1,9 @@
 /**********************************************
  * AUTHOR		: Samuel Yeaw
  * STUDENT ID	: 726729
- * ASSIGN # 13	: Recursion
+ * PROJECT #2	: iRobot
  * CLASS		: CS1C
- * DUE DATE		: 4/21/15
+ * DUE DATE		: 5/12/2015
  **********************************************/
 
 #include "Robot.h"

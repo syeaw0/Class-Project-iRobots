@@ -2,8 +2,8 @@
 * Team Awesome
 **********************************************************/
 
-#ifndef HEADER_H_
-#define HEADER_H_
+#ifndef DYLONHEADER_H_
+#define DYLONHEADER_H_
 
 #include <fstream>
 #include <iostream>
@@ -68,4 +68,4 @@ int GetAndCheckInput(const string PROMPT,     // OUT - input prompt
 string Ellipsis(string inputStr,    //CALC - input string
                 int    maxLength);  //CALC - max length of one line
 
-#endif /* HEADER_H_ */
+#endif /* DYLONHEADER_H_ */

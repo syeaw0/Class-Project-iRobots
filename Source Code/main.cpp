@@ -1,43 +1,43 @@
+/**********************************************
+ * AUTHOR		: Samuel Yeaw
+ * STUDENT ID	: 726729
+ * PROJECT #2	: iRobot
+ * CLASS		: CS1C
+ * DUE DATE		: 5/12/2015
+ **********************************************/
 
-#include "CustomerListType.h"
-#include "CustomerType.h"
+#include "Header.h"
 
+/**********************************************
+ * PROGRAM iRobot
+ * --------------------------------------------
+ * This program is an online pamphlet for the
+ * company iRobotTheBomb Inc.
+ **********************************************/
 int main()
 {
+	// VARIABLE DECLARATIONS
+	User  		userType;		// The type of user (Admin, Customer, or Guest)
+	Login 	  	login;			// The login class object
+	Pamphlet*	pamphlet;		// Pointer to the base Pamphlet class
 
-	CustomerListType customerList;
-	char 			 ans;
-	CustomerType	 aCust;
+	// VARIABLE INITIALIZATION
+	login.InitializeInfo("LoginInfoTest.txt");
 
-	customerList.AddFromFile("CustomerList.txt");
+	// USER LOGIN
+	userType = login.UserLogin();
 
-	customerList.PrintAllCustomerList();
-
-	do
+	// OPEN PAMPHLET DEPENDING ON USER TYPE
+	switch(userType)
 	{
-		customerList.AddFromConsole();
-
-		cout << "Add another? (y/n): ";
-		cin.get(ans);
-		ans = toupper(ans);
-		cin.ignore(1000, '\n');
-
-		customerList.PrintList();
-	}while(ans != 'N');
-
-	aCust.SetName("Jinko");
-
-	customerList.Search(aCust);
-
-	customerList.CustomerSearch("Jinko");
-
-	customerList.PrintAllCustomerList();
-	customerList.PrintKeyCustomerList();
-
-	customerList.DeleteACustomer("Jinko");
-	customerList.PrintAllCustomerList();
-
-	customerList.SaveList("Test.txt");
+	case ADMIN:		pamphlet = new Admin;
+					break;
+	case CUSTOMER:	pamphlet = new Customer;
+					break;
+	case GUEST:		pamphlet = new Guest;
+					break;
+	default:		break;
+	}
 
 	return 0;
 }
