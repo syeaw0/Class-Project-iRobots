@@ -8,9 +8,9 @@ Pamphlet::~Pamphlet()
 //accesses the help menu
 void Pamphlet::Help()
 {
-	int option;
-	HelpMenu help;
-	ostringstream output;
+	int option; //Help menu options to choose from
+	HelpMenu help; //enum of menu options
+	ostringstream output; //ostring stream containing the help menu prompt
 
 	output << setw(41) << setfill('*') << '*' << endl;
 	output << '?' << setw(40) << setfill(' ') << '?' << endl;
@@ -29,8 +29,10 @@ void Pamphlet::Help()
 	output << setw(41) << setfill('*') << '*' << endl;
 	output << "\nPlease select a help option: ";
 
+	//Error checks the menu input
 	option = GetAndCheckInput(output.str(),0,5);
 
+	//Converts the menu selection number to enum
 	switch (option)
 	{
 	case 0 : help = EXIT;
@@ -47,6 +49,7 @@ void Pamphlet::Help()
 		break;
 	}
 
+	// Executes help menu commands
 	switch (help)
 	{
 	case ORDER_PAMPHLET : cout << "\nTo order a pamphlet, select the"
