@@ -7,14 +7,17 @@
 //class Pamphlet;
 //struct Pamphlet::menuOption;
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
 #include <string>
 #include <vector>
+#include "Menu.h"
 //#include "customerlist.h"
-
 
 class Pamphlet {
 public:
-	struct menuOption;
+	typedef void (Pamphlet::*fptr)();
 
 	Pamphlet();
 	~Pamphlet();
@@ -22,27 +25,21 @@ public:
 	void menuLoop();
 	// the main function
 
-	typedef void (Pamphlet::*fptr)();
-	void addOption( fptr function, std::string description);
-	void insertOption( fptr function, std::string decription);
+	//void addOption( fptr function, std::string description);
+	//void insertOption( fptr function, std::string decription);
 	// when using derived member functions use static_cast<Pamphlet::fptr>()
 	//		pointed functions must have void return and void params
 	// we could just makes insertions simpler, its easy to switch back to private
 
-	// Various Scan Functions
-	int scanInt(int);
-	std::string scanName();
-
-	// Various Print Functions
-	//void printResponse(std::string);
+protected:
+	Menu<fptr> menu;
 
 private:
 	bool signedIn;
-	std::vector<menuOption> menu;
 
 	void initMenu();
-	void printMenu();
 
+	void Help();
 	void PrintRobotInfo();
 	void PrintRobotOptions();
 	void PrintRobotMaintenance();

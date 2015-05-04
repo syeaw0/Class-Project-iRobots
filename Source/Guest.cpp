@@ -7,8 +7,8 @@ Guest::Guest() {
 	initMenu();
 }
 void Guest::initMenu(){
-	insertOption(static_cast<Pamphlet::fptr>( &Guest::RequestPamphlet ),	"Request Pamphlet");
-	insertOption(static_cast<Pamphlet::fptr>( &Guest::Help ), 				"Help");
+	menu.insert(static_cast<Pamphlet::fptr>( &Guest::RequestPamphlet ),	"Request Pamphlet");
+	menu.insert(static_cast<Pamphlet::fptr>( &Guest::Help ), 			"Help");
 }
 
 void Guest::Help(){

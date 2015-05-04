@@ -6,6 +6,7 @@
 #include "Pamphlet.h"
 #include "CustomerListType.h"
 //#include "Customer.h"
+#include "input.h"
 #include <stdio.h>
 
 class Admin : public Pamphlet {
@@ -27,6 +28,8 @@ private:
 	void PrintCustomers();
 	void PrintCustomersByName();
 };
+
+
 
 
 #endif /* ADMIN_H_ */
