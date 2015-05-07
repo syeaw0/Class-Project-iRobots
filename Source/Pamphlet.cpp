@@ -9,6 +9,7 @@
 Pamphlet::Pamphlet() : signedIn(true) {
 	menu = Menu<fptr>("iRobotsTheBomb Pamphlet");
 	initMenu();
+	robotInfo.Initialize("RobotInfo.txt");
 }
 Pamphlet::~Pamphlet() {
 
@@ -33,25 +34,31 @@ void Pamphlet::initMenu(){
 }
 
 void Pamphlet::Help(){
-	printf("--base pamphlet help\n");
+	printf("--base pamphlet help (I dont think this is ever used)\n");
 }
 void Pamphlet::PrintRobotInfo(){
 	printf("--Print Robot Info\n");
+	std::cout << robotInfo.GetOptions() << std::endl;
 }
 void Pamphlet::PrintRobotOptions(){
 	printf("--Print Robot Options\n");
+	std::cout << robotInfo.GetOptions() << std::endl;
 }
 void Pamphlet::PrintRobotMaintenance(){
 	printf("--Print Maintenance\n");
+	std::cout << robotInfo.GetMaintenance() << std::endl;
 }
 void Pamphlet::PrintRobotPolicy(){
 	printf("--Print Policy\n");
+	std::cout << robotInfo.GetPolicy() << std::endl;
 }
 void Pamphlet::PrintTestimonials(){
 	printf("--Print Testimonials\n");
+	// testimonials.print()
 }
 void Pamphlet::PrintContacts(){
 	printf("--Print Contacts\n");
+	//
 }
 void Pamphlet::SignOut(){
 	printf("--Sign Out\n");
