@@ -101,6 +101,7 @@ private:
 	std::string textError, textDescription, textTitle, textPrompt;
 	std::string optBefore, optMiddle, optAfter;
 
+	void init();
 	void printLines(int);
 	void printN(char, int); // prints N characters
 };
@@ -187,7 +188,17 @@ struct Menu<T>::Option{
 
 template <class T>
 Menu<T>::Menu(){
+	init();
+}
 
+template <class T>
+Menu<T>::Menu(std::string initTitle) {
+	init();
+	setTitle(initTitle);
+}
+
+template <class T>
+void Menu<T>::init(){	// workaround for delegating constructor
 	setWidth(75);
 	setLinesBefore(1);
 	setLinesAfter(0);
@@ -200,11 +211,6 @@ Menu<T>::Menu(){
 	setFormatOption("", " - ", "");
 
 	options.reserve(16);
-}
-
-template <class T>
-Menu<T>::Menu(std::string initTitle) : Menu() {
-	setTitle(initTitle);
 }
 
 template <class T>
