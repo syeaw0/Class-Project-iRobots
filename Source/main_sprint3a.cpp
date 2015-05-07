@@ -5,22 +5,12 @@
 //#define DEBUG_MENU_TRACE	//
 //#define NO_LOGIN CUSTOMER	// build with ADMIN, CUSTOMER, or GUEST to bypass login
 
-#include <stdio.h>
-#include <iostream>
-#include <stdlib.h>
-#include <string>
-#include <limits>
-
-#include "CustomerListType.h"
-#include "Pamphlet.h"
-#include "Admin.h"
-#include "Customer.h"
-#include "Guest.h"
-#include "Login.h"
+#include "header.h"
 
 int main(){
 
 	// VARIABLE DECLARATIONS
+	bool        invalid;
 	User  		userType;		// The type of user (Admin, Customer, or Guest)
 	Login 	  	login;			// The login class object
 	Pamphlet*	pamphlet;		// Pointer to the base Pamphlet class
@@ -30,13 +20,31 @@ int main(){
 	// VARIABLE INITIALIZATION
 	login.InitializeInfo("LoginInfoTest.txt");
 
-
 	while(1){	// eventually replace loop
 		#ifdef NO_LOGIN
 		userType = NO_LOGIN;
 		#else
 		// USER LOGIN
-		userType = login.UserLogin();
+		do
+		{
+			invalid = false;
+
+			try
+			{
+				userType = login.UserLogin();
+			}
+
+			catch(Login::InvalidPassword&)
+			{
+				cout << "*** Invalid Password ***\n";
+				invalid = true;
+			}
+			catch(Login::InvalidUsername&)
+			{
+				cout << "*** Invalid Username ***\n";
+				invalid = true;
+			}
+		}while(invalid);
 		#endif
 		// OPEN PAMPHLET DEPENDING ON USER TYPE
 		switch(userType)
