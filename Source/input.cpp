@@ -6,13 +6,16 @@ void input::dumpLine(std::istream& str){
 	using namespace std;
 	str.ignore(numeric_limits<streamsize>::max(), '\n');
 }
+void input::specialFlush(FILE* f){
+	fscanf(f, "%*[^\n]%*c");
+}
 
 int input::scanInt(){
 	int input;
 	bool success = false;
 	do{
 		if( scanf("%d", &input) == 0){
-			fflush(stdin);
+			specialFlush(stdin);
 			continue;
 		}
 	}
@@ -25,7 +28,7 @@ int input::scanIntRange(int min, int max){
 	bool success = false;
 	do{
 		if( scanf("%d", &input) == 0){
-			fflush(stdin);
+			specialFlush(stdin);
 			continue;
 		}
 		success = input >= min && input <= max;
@@ -41,8 +44,8 @@ int input::scanIntPrompt(std::string prompt, std::string error, int min, int max
 	do{
 		std::cout << prompt;
 		if( scanf("%d", &input) == 0){
-			fflush(stdin);
-			std::cout << error;
+			specialFlush(stdin);
+			std::cout << error << '\n';
 			continue;
 		}
 		success = input >= min && input <= max;

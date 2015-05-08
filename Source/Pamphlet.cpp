@@ -20,8 +20,6 @@ void Pamphlet::menuLoop(){
 		menu.print();
 		menuCall = menu.eval();
 		(this->*menuCall)();
-
-		system("pause");
 	}
 }
 void Pamphlet::initMenu(){

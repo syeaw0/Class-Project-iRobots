@@ -4,6 +4,8 @@
 #define GUEST_H_
 
 #include "Pamphlet.h"
+#include "CustomerListType.h"
+#include "Login.h"
 #include <stdio.h>
 
 class Guest : public Pamphlet {
