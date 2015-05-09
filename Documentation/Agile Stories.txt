@@ -1,0 +1,247 @@
+﻿Agile Stories
+
+Story #1:  As an administrator, I want to have access to a help menu so that I can get help using the online pamphlet.
+Detailed Description:  At any point in the online pamphlet, there should be an option to go to the help menu.  The help menu will be easy to use and intuitive.  This help menu will let the user choose between help topics or go back to the previous menu.  When the help topic is chosen, the appropriate help will be displayed.  After the help is displayed, the previous menu will be displayed.
+Story Point Estimation:  (1-10) 3
+Priority: (1-10) 6
+Assignee: Dylon Dickinson
+List of Tasks and Tests:
+1.	Write a help page for each help topic.
+2.	Add a help option to all existing menus that loop when help is selected.
+3.	Create a function that is called when the user selects the help option in any menu.
+4.	Create a switch statement that prints the appropriate help page.
+5.	Test by selecting help in all menus and choosing each help option.
+6.	Ensure appropriate help is displayed and the previous menu is displayed after the help.
+Definition of Done:  All available menus will have the help option.  The help menu will function properly.  The code for the help menu will contain proper documentation.  A new user will be able understand the pamphlet by using the help menu.
+
+Story #2:  As a potential customer, I want to see an honest sales pitch that highlights the features of each product that I would deem important so that I might make an informed purchasing decision.
+Detailed Description:  On the homepage of the online pamphlet, the sales pitch will be displayed.  It will be carefully written to catch the attention of customers and potential customers alike.  The sales pitch will contain pertinent information that is important to a customer.  The sales pitch will show how iRobotsTheBomb robots stand out from the competition.
+Story Point Estimation:  (1-10) 2
+Priority: (1-10) 7
+Assignee: Dylon Dickinson
+List of Tasks and Tests:
+1.	Expertly craft a sales pitch that will catch the attention of the target market.
+2.	Write code to output the sales pitch on the first page of the online pamphlet.
+3.	Ensure that the sales pitch is printed in a neat and easy to read format.
+4.	Test by allowing all members of the Scrum team to proof read the sales pitch.
+Definition of Done: The sales pitch must be convincing and straight forward.  All members of the Scrum team must approve of the sales pitch.  The program must output the sales pitch properly.  The associated code must be fully documented.
+
+Story #3:  As a potential customer, I want to know the physical environments supported so that I can purchase the correct robot and utilize the robot as intended.
+Detailed Description: On a page in the pamphlet, a list of physical environments should exist that allows the customer or potential customer to know which robots support which environments.  The list of environments should be easy to understand and sorted by robot type.  The list should be displayed before the customer has the chance to purchase a robot, so that they can make an informed decision.
+Story Point Estimation:  (1-10)  2
+Priority: (1-10)  5
+Assignee: Dylon Dickinson
+List of Tasks and Tests:
+1.	Write a list of physical environments supported, sorted by robot type.
+2.	Write code to output the list.
+3.	Test that the list outputs correctly and before the purchase option is available.
+4.	Get approval of all Scrum team members proof reading the list.
+Definition of Done: The list will be easy to understand and approved by all Scrum team members.  The list will output correctly.  The associated code will be fully documented.
+
+Story #4:  As a potential customer, I want to know the concept of operations of each robot, so I can use my robot to its full potential and minimize damage caused by improper use.
+Detailed Description:  There should be a concept of operations for each robot for sale.  The description should precisely what the robot does and how it does it.  The description should be understandable to customers who have no technical knowledge about the robot.  The concept of operations should describe the different functions of each robot.  The concept of operations should be displayed before the customer can purchase a robot.
+Story Point Estimation:  (1-10)  3
+Priority: (1-10)  5
+Assignee: Dylon Dickinson
+List of Tasks and Tests:
+1.	Write a paragraph for each robot about the concept of operations.
+2.	Write code to output the concept of operations.
+3.	Test that the concept of operations outputs correctly and before the option to buy is available.
+4.	Get approval of all Scrum team members proof reading the concept of operations.
+Definition of Done: The concept of operations will be easy to understand and approved by all Scrum team members.  The concept of operations will output correctly.  The associated code will be fully documented.
+
+Story #5:  As a potential customer, I want to know the robot options available and the price of each robot, so I can know if I can afford the robot that I need.
+Detailed Description: On a page in the pamphlet, a list of 3 available robots for purchase will be displayed with the corresponding price.  The list of robots with prices should be easy to understand and sorted by robot type.  The list should be displayed before the customer has the chance to purchase a robot, so that they can make an informed decision.
+Story Point Estimation:  (1-10)  3
+Priority: (1-10)   4
+Assignee: Dylon Dickinson
+List of Tasks and Tests:
+5.	Write a list of robots available for purchase and their current prices
+6.	Write code to output the list.
+7.	Test that the list outputs correctly and before the purchase option is available.
+8.	Get approval of all Scrum team members proof reading the list.
+Definition of Done: The list will be easy to understand and approved by all Scrum team members.  The list will output correctly.  The associated code will be fully documented.
+
+#6 As someone interested in the iRobot, I want information about the logistics and maintenance and the
+   pricing, so that I can make an informed decision on this product
+	a. Story Point  - 3
+	b. Priority	- 2
+	c. Tasks	- Create a maintenance and logisitics plan that detail when 
+			  and how the iRobot will be maintained. Also include pricing
+			  options for the reader of the pamphlet to review.
+	d. Done When	- A reasonably detailed plan for the maintenance and its pricing has been
+			  established, one that would satisfy a consumer. This should include:
+				1: Replacement parts
+				2: Having the iRobot checked regularly by a mechanic
+
+#7 As someone interesting in purchasing iRobot, I want a guarantee policy, so that if it breaks or I am 
+   unsatisfied, I can return it
+	a. Story Point	- 3
+	b. Priority	- 2
+	c. Tasks	- Formulate a guarantee policy that provides reimbursement or a replacement
+			  if the current iRobot breaks, and also provides a refund if the user is
+			  not satisfied
+	d. Done When	- A guarantee for reimbursement or replacement has been written in case of:
+				1: The iRobot breaks
+				2: The user is not satisfied
+
+#8 As the produces of the iRobot, I want testimonials in the pamphlet, so that potential customers can see 
+   the positive experiences of other consumers and invest in our product
+	a. Story Point	- 5
+	b. Priority	- 5
+	c. Tasks	- Show positive testimonials to the viewer of the pamphlet
+			- Include the option to add additional testimonials
+			- Have the testimonials persist between executions
+	d. Done When	- Several positive testimonials of the iRobot product have been written and are
+			  on the online pamphlet
+			- Additional testimonials can be easily added
+			- The additional testimonials are saved
+
+#9 As a viewer of the pamphlet, I want contact information, so that I can contact the company if I am
+   interested in their product
+	a. Story Point	- 2
+	b. Priority	- 2
+	c. Tasks	- Provide contanct information as well as methods to contact the company
+	d. Done When	- Phone number is provided
+			- The mailing address is provided
+			- The email is provided
+			- A customer can leave a message on the pamphlet with their email or phone number
+			  and can expect to get a response
+
+#10 As the owner of the iRobot, I want a list of companies that have already received the pamphlet, their
+    level of interest in the product, and how beneficial they would be to have as a customer, so that I
+    can know how to market the product
+	a. Story Point 	- 8
+	b. Priority	- 7
+	c. Tasks	- Have a file containing:
+				1: The customer
+				2: Their level of interest
+				3: How beneficial to the company it would be to have them
+			- Read in  from the file
+			- Track which companies have already received the pamphlet
+	d. Done When	- The program has all the appropriate information of the customers, can display
+			  the information, and can display which companies have already received the 
+			  pamphlet
+
+11. As an administrator, I would like to be able to update the customer list, so that I can change customer 
+    information such as changing the rating and “key” field.
+	a. Story Point -  6
+	b. Priority - 10
+	c. Tasks - Make options so that the administrator can choose which customer the admin would like to change 
+		   information about.
+		 - Make options so that the administrator can choose what type of information is to be changed.
+		 - Update the information accurately.
+	d. Done When - Allows the administrator to update information about a certain customer. 
+		Always make sure that the customer name is unique and that there are no duplicates.
+		The customer list is updated to hold correct information about a customer.
+		Make sure that only an administrator can update the customer list and not the customer.
+		
+12. As an administrator, I want the ability add and delete customers, so that only I can keep an accurate list 
+    of all the customers for iRobotsTheBomb.
+	a. Story Point 	- 5
+	b. Priority 	- 8
+	c. Tasks      	- There is a default special login that is provided for only administrators that gives the 
+		  	  administrator the option to add or delete a customer.
+			- The administrator provides information about the customer, he/she would like to add.
+			- This includes Name, Address, City, State, ZipCode, interest level in company, and
+			  whether or not the customer is a “key” customer.
+			- Check to make sure that the customer name is unique.
+			- Every time a new customer is added or deleted, the list is accurate and well maintained.
+	d. Done When 	- The Administrator is able to specially login and see information about company that 
+			  should not be viewed by the customers.
+			- The administrator has the ability to add a customer.
+			- The administrator has the ability to delete a customer.
+			- To add a customer the administrator must provide valid information about a customer 
+			  (Name, Address, City, State, ZipCode, interest level in company, and whether or not 
+			  the customer is a “key” customer).
+			- To delete a customer, the administrator must provide a name. 
+			- The customer list must be accurate after each added or deleted customer.
+			- The customer list must be accurate even after the program is ended and restarted.
+			- If the administrator is not able to add a customer, the admin must be notified why.
+			- If the administrator cannot delete a customer, the admin must be notified why.
+			
+13. As a perspective customer, I would like to be able to request a copy of the pamphlet, so that I can decide 
+    whether or not I would like to purchase products from the company.
+	a. Story Point -  3
+	b. Priority - 7
+	c. Tasks - Make an option for perspective customers where they can contact the company.
+	  	 - The perspective customer will have to fill out a form indicating the name, address, city, 
+	  	   state, zip code and interest level in the company.
+		 - Notify the perspective customer that the pamphlet has been sent.
+	d. Done When - The perspective customer is able to request a pamphlet.
+		     - The perspective customer will be notified when the pamphlet will be mailed to them.
+		     - The perspective customer will be added the customer list once the pamphlet is sent.
+
+14. As an administrator, I would like the customer list to be persistent between executions, so that I can 
+    always have an updated and accurate list of customers. 
+	a. Story Point -  6
+	b. Priority - 3
+	c. Tasks - Make sure after every end of an execution the file of all the customers is updated and saved.
+		 - When executing the program again, automatically read the file so that it provides an 
+		   updated customer list.
+	d. Done When - After executing the program, the customer list should be updated on the file automatically.
+	 	     - When executing the program, the program will automatically grab and retrieve all 
+	 	       the customers from a designated customer file. 
+	 	       
+15. As a customer, I would like option to order one or more iRobot devices, so that I purchase everything I 
+    need for my company/corporation. 
+	a. Story Point -  5
+	b. Priority - 6
+	c. Tasks - Allow the ability for the customer to purchase an iRobot. The customer will be able to 
+		   choose the product and the quantity of the item.
+		 - After adding a purchase the customer will be asked if he/she would like to purchase more. 
+		   If the customer is done purchasing, a receipt will be printed out for the user. 
+		   Otherwise, the customer will be able to purchase another product.
+	d. Done When - The customer should be a valid customer.
+	- The customer should be able to choose a iRobot to purchase and if the iRobot does not exist, 
+	  the customer will be notified.
+	- The customer should be able to choose as many iRobots he/she would like to purchase.
+	- When done purchasing, the purchase will be added to the purchase list.
+	- The customer will have received an accurate total of how much the iRobots cost.
+
+16. As an administrator, I want sole access to all customer data.
+	a. Story Point - 5
+	b. Priority - 8
+	c. Tasks - Create a login interface and a method for managing different admin or customer accounts.
+		 - Change the main interface (print, add, delete) depending on the user type.
+		 - The login should distinguish between admins, customers, and new customers.
+		 - Create a logout option
+	d. Done When - Customers cannot print, add, delete, modify any customer data besides their own.
+			There should not be interface options to perform these tasks.
+	 	     - The administrator can print, add, delete, modify customer data (#12).
+	
+17. As an administrator, I want to keep track of whether or not customers have received a pamphlet or not.
+	a. Story Point - 3
+	b. Priority - 4
+	c. Tasks - Mark in the customer file whether or not customers have received a pamphlet (#10).
+		 - Allow an admin to lookup received/not-received by name.
+		 - Allow an admin to display two tables - one listing received, one not received.
+		 - Allow an admin to manually change whether or not a customer has received a pamphlet.
+	d. Done When - An administrator can lookup a customer and see whether or not they have received 
+			a pamphlet.
+		     - An administrator can print a list showing customers who have received or who 
+		     	have not received a pamphlet.
+		     - The lists/lookup are accurate and sorted by name.
+		     - An administrator can manually change the 'received' status of a customer.
+
+18. As an administrator, I want to be able to view a list of iRobots customers.
+	a. Story Point - 5
+	b. Priority - 6
+	c. Tasks - Allow an admin to display a table with iRobots customers.
+		 - display other customer information like the city and level of interest.
+		 - Sort the table by name. 
+		 - Be able to lookup a single customer.
+	d. Done When - An admin can quickly display a table of all customers and customer data.
+		     - The table is aesthetic and sorted by name.
+		     - An admin can lookup the data of a single customer.
+	
+19. As an administrator, I want to be able to view a list of key iRobots customers.
+	a. Story Point - 6
+	b. Priority - 6
+	c. Tasks - Allow an admin to display a table with key iRobots customers.
+		 - Allow an admin to display a table with non-key iRobots customers.
+		 - Sort the table by name.
+	d. Done When - An admin can quickly display a table of all key customers.
+		     - An admin can display a table of non-key customers.
+		     - An admin can lookup the 'key' status of any customer.
+		     - Tables and displays are aesthetic and sorted.
