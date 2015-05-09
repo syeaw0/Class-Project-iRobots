@@ -12,6 +12,7 @@
 namespace input{
 	void dumpLine(std::istream&);	// fix for getline() '\n' issue, called between cin/scanf and getline calls
 
+	void specialFlush(FILE*);
 	int scanInt();
 	int scanIntRange(int min, int max);
 	int scanIntPrompt(std::string prompt, std::string error, int min, int max);

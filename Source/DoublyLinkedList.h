@@ -85,6 +85,8 @@ void DoublyLinkedList<Type>::AddNode(Type addInfo) // IN & CALC - Node info
 {
 	// PROCESSING - Add new node
 	Node<Type> *addNode = new Node<Type>;
+	addNode->next = NULL;
+	addNode->prev = NULL;
 
 	// PROCESSING - Get data for node & then sort the node into the list
 	addNode->data = addInfo;

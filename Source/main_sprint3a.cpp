@@ -3,7 +3,7 @@
 #ifdef MAIN_SPRINT3
 
 //#define DEBUG_MENU_TRACE	//
-//#define NO_LOGIN CUSTOMER	// build with ADMIN, CUSTOMER, or GUEST to bypass login
+//#define NO_LOGIN GUEST	// build with ADMIN, CUSTOMER, or GUEST to bypass login
 
 #include "header.h"
 

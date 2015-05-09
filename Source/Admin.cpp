@@ -4,7 +4,8 @@
 
 Admin::Admin() {
 	initMenu();
-	//customers.AddFromFile("CustomerList.txt");
+	customers.AddFromFile("CustomerList.txt");
+	//newCustomers.AddFromFile("P
 }
 
 void Admin::initMenu(){
@@ -29,6 +30,8 @@ void Admin::ChangeCustomerInfo(){
 }
 void Admin::CustomerSearch(){
 	printf("--Customer Search\n");
+
+
 }
 void Admin::AddCustomer(){
 	printf("--Add Customer\n");
