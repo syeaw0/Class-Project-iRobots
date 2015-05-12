@@ -14,11 +14,15 @@
 class Customer : public Pamphlet {
 public:
 	Customer();
+	virtual ~Customer();
 		//addOption(function1, std::string("Function 1"));
 private:
+	Testimonials aTest;
 	//CustomerList customers;
+	virtual void menuLoop();
 	void initMenu();
 
+	void AddTestimonial();
 	void Help();
 	void BuyRobot();
 };

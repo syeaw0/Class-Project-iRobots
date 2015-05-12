@@ -4,6 +4,7 @@
 
 #include "DoublyLinkedList.h"
 #include "CustomerType.h"
+#include "input.h"
 #include <string>
 #include <fstream>
 
@@ -19,8 +20,11 @@ public:
 	 ****MUTATORS****
 	 ****************/
 	void AddFromConsole();				// Add Customer From Console
+	void AddFromFileGuestToCust(string fileName);
 	void AddFromFile(string fileName);	// Add Customers From File
+	void ChangeCustomerInfo(string aName);
 	bool DeleteACustomer(string aName);	// Delete a Customer
+	void SaveAndOpenList(string fileName);
 
 	/*****************
 	 ****ACCESSORS****

@@ -11,6 +11,7 @@
 class Guest : public Pamphlet {
 public:
 	Guest();
+	virtual ~Guest();
 		//addOption(function1, std::string("Function 1"));
 
 private:

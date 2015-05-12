@@ -12,6 +12,7 @@
 class Admin : public Pamphlet {
 public:
 	Admin();
+	virtual ~Admin();
 		//addOption(function1, std::string("Function 1"));
 
 private:
@@ -24,9 +25,11 @@ private:
 	void CustomerSearch();
 	void AddCustomer();
 	void DeleteCustomer();
+	void AddGuestToBeACustomer();
 	void SaveChanges();
 	void PrintCustomers();
 	void PrintCustomersByName();
+	void PrintKeyCustomers();
 };
 
 
