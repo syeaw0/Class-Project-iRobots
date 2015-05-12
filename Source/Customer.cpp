@@ -46,6 +46,4 @@ void Customer::BuyRobot(){
 void Customer::AddTestimonial(){
 	printf("--Add a Testimonial\n");
 	aTest.AddTestimonial("TestimonialsInfo.txt");
-	aTest.SaveTestimonial("TestimonialsInfo.txt");
-	aTest.AddFromFile("TestimonialsInfo.txt");
 }

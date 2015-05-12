@@ -96,12 +96,11 @@ void Testimonials::AddFromFile(string fileName)
 
 void Testimonials::SaveTestimonial(string fileName)
 {
-	int index;
 	int count;
 	ofstream outFile;
 
 	count = signed(testList.size());
-	outFile.open(fileName.c_str());
+	outFile.open(fileName.c_str(), std::ios_base::app);
 
 	if(outFile.fail())
 	{
@@ -109,53 +108,103 @@ void Testimonials::SaveTestimonial(string fileName)
 	}
 	else
 	{
-		for(index = 0; index < count; index++)
+		outFile << aTest.custName;
+		outFile << endl;
+
+		switch(aTest.aRating)
 		{
-			outFile << testList[index].custName;
-			outFile << endl;
-
-			switch(testList[index].aRating)
-			{
-			case ZERO_STARS  : 	outFile << "Zero Stars\n";
-								break;
-			case ONE_STARS   : 	outFile << "One Stars\n";
-								break;
-			case TWO_STARS   : 	outFile << "Two Stars\n";
-								break;
-			case THREE_STARS : 	outFile << "Three Stars\n";
-								break;
-			case FOUR_STARS  : 	outFile << "Four Stars\n";
-								break;
-			case FIVE_STARS  : 	outFile << "Five Stars\n";
-								break;
-			default 		 : 	break;
-
-			}
-			outFile << testList[index].words;
-			outFile << endl << endl;
+		case ZERO_STARS  : 	outFile << "Zero Stars\n";
+							break;
+		case ONE_STARS   : 	outFile << "One Stars\n";
+							break;
+		case TWO_STARS   : 	outFile << "Two Stars\n";
+							break;
+		case THREE_STARS : 	outFile << "Three Stars\n";
+							break;
+		case FOUR_STARS  : 	outFile << "Four Stars\n";
+							break;
+		case FIVE_STARS  : 	outFile << "Five Stars\n";
+							break;
+		default 		 : 	break;
 
 		}
+		outFile << aTest.words;
+		outFile << endl << endl;
 	}
 }
 
 void Testimonials::Print() const
 {
-	int index;
+	const int MAX_LENGTH = 75;
+	int count;
 	int size;
+	string   wordOut;	// CALC & OUT - One word from synopsis
+	string   lineOut;	// CALC & OUT - A line from synopsis
+	int 	 index;		// CALC		  - Index synopsis string
+	int 	 strLength;	// CALC		  - Length of synopsis
 
 	size = signed(testList.size());
 
-	for(index = 1; index < size; index++)
+	for(count = 0; count < size; count++)
 	{
-		if(testList[index].aRating == FOUR_STARS ||
-		   testList[index].aRating == FIVE_STARS)
+		if(testList[count].aRating == FOUR_STARS ||
+		   testList[count].aRating == FIVE_STARS)
 		{
-			cout << testList[index].words << endl;
-			cout << "     - " << testList[index].custName << endl;
+
+			// PROCESSING - Length of synopsis
+			strLength = testList[count].words.length();
+
+			// PROCESSING - Initialize line and word to none
+			lineOut = "";
+			wordOut = "";
+
+			// PROCESSING - Index through all of synopsis
+			for(index = 0; index < strLength; index++)
+			{
+				// PROCESSING - Check for spaces
+				if(testList[count].words[index] != ' ')
+				{
+					wordOut += testList[count].words[index];
+				}
+				else
+				{
+					// PROCESSING - Check for length of line / clear line
+					if((lineOut.length() + wordOut.length()) > MAX_LENGTH)
+					{
+						// OUTPUT - A line from synopsis
+						cout << lineOut;
+						cout << endl;
+						lineOut.clear();
+					}
+
+					// OUTPUT - A word from synopsis plus space / clear word
+					lineOut += wordOut + ' ';
+					wordOut.clear();
+				}
+			}
+			// OUTPUT - A line from synopsis / clear line
+			cout << lineOut;
+
+			// OUTPUT - Check if word fits on line or not / clear word
+			if(lineOut.length() + wordOut.length() > MAX_LENGTH)
+			{
+				cout << endl;
+			}
+
+			// OUTPUT - Word that did not fit on last line
+			cout << wordOut;
+
+			// PROCESSING - Clear the line and word
+			lineOut.clear();
+			wordOut.clear();
 		}
+		cout << "\n     - " << testList[count].custName << endl << endl;
 	}
 }
 
-
+void Testimonials::ClearTestimonials()
+{
+	testList.clear();
+}
 
 

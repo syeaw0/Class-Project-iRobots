@@ -40,6 +40,7 @@ public:
 	void AddFromFile(string fileName);
 	void SaveTestimonial(string fileName);
 	void Print() const;
+	void ClearTestimonials();
 
 private:
 	TestInfo aTest;

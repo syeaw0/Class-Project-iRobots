@@ -16,7 +16,6 @@ public:
 	Customer();
 		//addOption(function1, std::string("Function 1"));
 private:
-
 	Testimonials aTest;
 	//CustomerList customers;
 	void initMenu();

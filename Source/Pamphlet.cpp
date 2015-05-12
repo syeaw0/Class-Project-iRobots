@@ -53,6 +53,7 @@ void Pamphlet::PrintRobotPolicy(){
 }
 void Pamphlet::PrintTestimonials(){
 	printf("--Print Testimonials\n");
+	testInfo.ClearTestimonials();
 	testInfo.AddFromFile("TestimonialsInfo.txt");
 	testInfo.Print();
 }
