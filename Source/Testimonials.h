@@ -36,6 +36,7 @@ public:
 	Testimonials();
 	virtual ~Testimonials();
 
+	void SolicitForTestimonial();
 	void AddTestimonial(string fileName);
 	void AddFromFile(string fileName);
 	void SaveTestimonial(string fileName);

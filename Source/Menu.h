@@ -29,7 +29,7 @@ public:
 	Menu(std::string title);
 	// Initialized with a title!
 
-	~Menu();
+	virtual ~Menu();
 	// I'm not sure why this is needed. Function pointers don't work w/o it
 
 	// [ADD] Copy Constructor?

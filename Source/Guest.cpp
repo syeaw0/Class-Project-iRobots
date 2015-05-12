@@ -6,6 +6,11 @@
 Guest::Guest() {
 	initMenu();
 }
+
+Guest::~Guest(){
+
+}
+
 void Guest::initMenu(){
 	menu.insert(static_cast<Pamphlet::fptr>( &Guest::RequestPamphlet ),	"Request Pamphlet");
 	menu.insert(static_cast<Pamphlet::fptr>( &Guest::Help ), 			"Help");

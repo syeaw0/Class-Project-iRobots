@@ -207,4 +207,15 @@ void Testimonials::ClearTestimonials()
 	testList.clear();
 }
 
+void Testimonials::SolicitForTestimonial()
+{
+	char ans;
 
+	ans = input::scanChar("Do you want to add a testimonial (Y/N)? ", "***Invalid Response***", 'Y', 'N');
+
+	if(ans == 'Y')
+	{
+		AddTestimonial("TestimonialsInfo.txt");
+	}
+
+}

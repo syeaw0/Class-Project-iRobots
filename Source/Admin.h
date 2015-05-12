@@ -12,6 +12,7 @@
 class Admin : public Pamphlet {
 public:
 	Admin();
+	virtual ~Admin();
 		//addOption(function1, std::string("Function 1"));
 
 private:

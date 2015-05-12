@@ -12,6 +12,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 #include "Menu.h"
 #include "Robot.h"
 #include "Testimonials.h"
@@ -22,9 +23,10 @@ public:
 	typedef void (Pamphlet::*fptr)();
 
 	Pamphlet();
-	~Pamphlet();
+	virtual ~Pamphlet();
 
-	void menuLoop();
+	bool GetSignedIn();
+	virtual void menuLoop();
 	// the main function
 
 	//void addOption( fptr function, std::string description);

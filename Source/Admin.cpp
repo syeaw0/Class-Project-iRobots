@@ -4,8 +4,12 @@
 
 Admin::Admin() {
 	initMenu();
-	customers.AddFromFile("TestSave.txt");
+	customers.AddFromFile("CustomerList.txt");
 	//newCustomers.AddFromFile("P
+}
+
+Admin::~Admin(){
+
 }
 
 void Admin::initMenu(){
@@ -64,6 +68,8 @@ void Admin::Help(){
 		std::cout << helpText << std::endl;
 	}
 }
+
+
 void Admin::ChangeCustomerInfo(){
 	Node<CustomerType> *toChange;
 	CustomerType		infoChange;
@@ -152,7 +158,7 @@ void Admin::ChangeCustomerInfo(){
 		}
 
 	}
-	customers.SaveAndOpenList("TestSave.txt");
+	customers.SaveAndOpenList("CustomerList.txt");
 }
 void Admin::CustomerSearch(){
 	printf("--Customer Search\n");
@@ -173,7 +179,7 @@ void Admin::AddCustomer(){
 		customers.PrintList();
 	}while(ans != 'N');
 
-	customers.SaveAndOpenList("TestSave.txt");
+	customers.SaveAndOpenList("CustomerList.txt");
 	// cin customers?
 }
 void Admin::DeleteCustomer(){
@@ -181,12 +187,12 @@ void Admin::DeleteCustomer(){
 	std::string inName = input::scanName();
 	customers.DeleteACustomer(inName);
 
-	customers.SaveAndOpenList("TestSave.txt");
+	customers.SaveAndOpenList("CustomerList.txt");
 }
 void Admin::SaveChanges(){
 	printf("--Saving\n");
 
-	customers.SaveList("TestSave.txt");
+	customers.SaveList("CustomerList.txt");
 	// customer.save
 }
 void Admin::PrintCustomers(){
@@ -214,5 +220,5 @@ void Admin::AddGuestToBeACustomer(){
 	fileName = "ProspectiveCustomerList.txt";
 	customers.AddFromFileGuestToCust(fileName.c_str());
 
-	customers.SaveAndOpenList("TestSave.txt");
+	customers.SaveAndOpenList("CustomerList.txt");
 }
