@@ -24,9 +24,11 @@ private:
 	void CustomerSearch();
 	void AddCustomer();
 	void DeleteCustomer();
+	void AddGuestToBeACustomer();
 	void SaveChanges();
 	void PrintCustomers();
 	void PrintCustomersByName();
+	void PrintKeyCustomers();
 };
 
 

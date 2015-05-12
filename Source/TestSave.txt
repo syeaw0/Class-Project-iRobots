@@ -1,0 +1,35 @@
+CIA
+987 Jefferson Blvd
+Baltimore, MD 754
+not interested
+key
+FBI
+1234 Lincoln Ave.
+Washington, D.C. 234
+somewhat interested
+key
+Los Angeles Airport
+1 World Way
+Los Angeles, CA 90045
+very interested
+key
+Los Angeles Angels
+2000 East Gene Autry Way
+Anaheim, CA 92806
+very interested
+key
+Los Angeles Dodgers
+1000 Elysian Park Avenue
+Los Angeles, CA 90012
+very interested
+nice to have
+Saddleback College
+28000 Marguerite Pkwy
+Mission Viejo, CA 92692
+somewhat interested
+nice to have
+Sally
+12 Address
+blah, ca 92321
+somewhat interested
+key

@@ -16,7 +16,9 @@ namespace input{
 	int scanInt();
 	int scanIntRange(int min, int max);
 	int scanIntPrompt(std::string prompt, std::string error, int min, int max);
+	char scanChar(std::string prompt, std::string error, char check1, char check2);
 
+	std::string scanString(std::string prompt);
 	std::string scanName();		// line names
 }
 

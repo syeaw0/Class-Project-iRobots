@@ -13,6 +13,7 @@ void Customer::initMenu(){
 	// note this is reverse order
 	menu.insert(static_cast<Pamphlet::fptr>( &Customer::BuyRobot ),	"Buy Robot");
 	menu.insert(static_cast<Pamphlet::fptr>( &Customer::Help ), 	"Help");
+	menu.insert(static_cast<Pamphlet::fptr>( &Customer::AddTestimonial ), 	"Add A Testimonial");
 }
 void Customer::Help(){
 
@@ -40,4 +41,11 @@ void Customer::Help(){
 }
 void Customer::BuyRobot(){
 	printf("--Buy Robot\n");
+}
+
+void Customer::AddTestimonial(){
+	printf("--Add a Testimonial\n");
+	aTest.AddTestimonial("TestimonialsInfo.txt");
+	aTest.SaveTestimonial("TestimonialsInfo.txt");
+	aTest.AddFromFile("TestimonialsInfo.txt");
 }

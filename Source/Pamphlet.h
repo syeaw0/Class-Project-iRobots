@@ -14,6 +14,7 @@
 #include <vector>
 #include "Menu.h"
 #include "Robot.h"
+#include "Testimonials.h"
 //#include "customerlist.h"
 
 class Pamphlet {
@@ -38,7 +39,7 @@ protected:
 private:
 	Robot robotInfo; // this might have to be protected for "customer" use
 	bool signedIn;
-	//vector<Testimonials> testimonials
+	Testimonials testInfo;
 
 	void initMenu();
 

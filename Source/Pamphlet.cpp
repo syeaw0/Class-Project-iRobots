@@ -10,6 +10,7 @@ Pamphlet::Pamphlet() : signedIn(true) {
 	menu = Menu<fptr>("iRobotsTheBomb Pamphlet");
 	initMenu();
 	robotInfo.Initialize("RobotInfo.txt");
+	testInfo.AddFromFile("TestimonialsInfo.txt");
 }
 Pamphlet::~Pamphlet() {
 
@@ -52,7 +53,8 @@ void Pamphlet::PrintRobotPolicy(){
 }
 void Pamphlet::PrintTestimonials(){
 	printf("--Print Testimonials\n");
-	// testimonials.print()
+	testInfo.AddFromFile("TestimonialsInfo.txt");
+	testInfo.Print();
 }
 void Pamphlet::PrintContacts(){
 	printf("--Print Contacts\n");
@@ -62,7 +64,6 @@ void Pamphlet::SignOut(){
 	printf("--Sign Out\n");
 	signedIn = false;
 }
-
 
 
 // Guest -----------------------------------------
