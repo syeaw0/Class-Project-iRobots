@@ -12,7 +12,29 @@ void Guest::initMenu(){
 }
 
 void Guest::Help(){
-	printf("--Help You!\n");
+	Menu<std::string> helpMenu("Guest Help Menu");
+	std::string helpText;
+
+	helpMenu.add("Exiting",
+			"Exit Help Menu");
+	helpMenu.add("To request a pamphlet, select \"Request Pamphlet\" option from the main menu.\nYou will need to provide information about yourself in order to order a pamphlet.",
+			"Help requesting a pamphlet.");
+	helpMenu.add("To view robots, select \"Print Robot Options\" from the main menu.",
+			"Help viewing robot options.");
+	helpMenu.add("To view robot maintenance plans, select \"Print Robot Maintenance\" from the main menu.",
+			"Help viewing robot maintenance options.");
+	helpMenu.add("To view robot guarantee policy, select \"Print Robot Policy\" option from the main menu",
+			"Help viewing robot guarantee policy.");
+	helpMenu.add("To read testimonials, select \"Read Testimonials\" from the main menu.",
+			"Help reading testimonials.");
+	helpMenu.add("You may contact us by calling 1 800 555 5555",
+			"Contact us.");
+	helpMenu.print();
+
+	while(helpText != "Exiting"){
+		helpText = helpMenu.eval();
+		std::cout << helpText << std::endl;
+	}
 }
 void Guest::RequestPamphlet(){
 	CustomerListType customers;

@@ -24,8 +24,45 @@ void Admin::initMenu(){
 }
 
 void Admin::Help(){
-	printf("--Admin Class Help!\n");
+	Menu<std::string> helpMenu("Admin Help Menu");
+	std::string helpText;
 
+	helpMenu.add("Exiting",
+			"Exit Help Menu");
+	helpMenu.add("To change information about a customer, select \"Change Customer Info\" option from the main menu.\nYou will need to know the name of the customer in order to change information about that customer.\nYou will also be given an option of what information to change.",
+			"Help Change Customer Info");
+	helpMenu.add("To search for a customer, select \"Customer Search\" from the main menu.",
+			"Help Search For a Customer.");
+	helpMenu.add("To add guests as customers, select \"Add Guest To Become A Customer\" from the main menu.",
+			"Help To Change Guests to Become A Customer.");
+	helpMenu.add("To add a customer, select \"Add Customers\", from the main menu.\nYou will need to provide information about the customer.",
+			"Help to add a customer.");
+	helpMenu.add("To remove a customer from iRobotsTheBomb, select \"Delete Customer\", from the main menu.\nYou will need to provide the name of the customer to delete.",
+			"Help to remove a customer");
+	helpMenu.add("To save changes made, select \"Save Changes\", from the main menu.",
+			"Help To Save Changes");
+	helpMenu.add("To print KEY customers only, select \"Print Key Customers\", from the main menu.",
+			"Help To Print Only Key Customers");
+	helpMenu.add("To Print all customers, select \"Print Customers\", from the main menu.",
+			"Help To Print All Customers.");
+	helpMenu.add("To Print customers by name, select \"Print Customers By Name\", from the main menu",
+			"Help To Print Customers By Name");
+	helpMenu.add("To view robots, select \"Print Robot Options\" from the main menu.",
+			"Help viewing robot options.");
+	helpMenu.add("To view robot maintenance plans, select \"Print Robot Maintenance\" from the main menu.",
+			"Help viewing robot maintenance options.");
+	helpMenu.add("To view robot guarantee policy, select \"Print Robot Policy\" option from the main menu",
+			"Help viewing robot guarantee policy.");
+	helpMenu.add("To read testimonials, select \"Read Testimonials\" from the main menu.",
+			"Help reading testimonials.");
+	helpMenu.add("You may contact us by calling 1 800 555 5555",
+			"Contact us.");
+	helpMenu.print();
+
+	while(helpText != "Exiting"){
+		helpText = helpMenu.eval();
+		std::cout << helpText << std::endl;
+	}
 }
 void Admin::ChangeCustomerInfo(){
 	Node<CustomerType> *toChange;
@@ -132,11 +169,7 @@ void Admin::AddCustomer(){
 	{
 		customers.AddFromConsole();
 
-		cout << "Add another? (y/n): ";
-		cin.get(ans);
-		ans = toupper(ans);
-		cin.ignore(1000, '\n');
-
+		ans = input::scanChar("\nAdd another? (Y/N): ", "***Invalid Response***", 'Y', 'N');
 		customers.PrintList();
 	}while(ans != 'N');
 

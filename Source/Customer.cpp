@@ -11,9 +11,10 @@ Customer::Customer() {
 }
 void Customer::initMenu(){
 	// note this is reverse order
+	menu.insert(static_cast<Pamphlet::fptr>( &Customer::AddTestimonial ), 	"Add A Testimonial");
 	menu.insert(static_cast<Pamphlet::fptr>( &Customer::BuyRobot ),	"Buy Robot");
 	menu.insert(static_cast<Pamphlet::fptr>( &Customer::Help ), 	"Help");
-	menu.insert(static_cast<Pamphlet::fptr>( &Customer::AddTestimonial ), 	"Add A Testimonial");
+
 }
 void Customer::Help(){
 
