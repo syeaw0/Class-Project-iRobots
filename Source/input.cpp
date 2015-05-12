@@ -49,7 +49,7 @@ int input::scanIntPrompt(std::string prompt, std::string error, int min, int max
 			continue;
 		}
 		success = input >= min && input <= max;
-		if(!success) std::cout << error;
+		if(!success) std::cout << error << "\n";
 	}
 	while(!success);
 	return input;
@@ -58,6 +58,7 @@ int input::scanIntPrompt(std::string prompt, std::string error, int min, int max
 
 std::string input::scanName(){
 	std::string inName;
+	std::cout << "Enter Name: ";
 	std::getline(std::cin, inName);
 
 	// trimming here?
@@ -66,4 +67,32 @@ std::string input::scanName(){
 	//		special characters
 
 	return inName;
+}
+
+std::string input::scanString(std::string prompt){
+	std::string inString;
+	std::cout << prompt;
+	std::getline(std::cin, inString);
+
+	return inString;
+}
+
+char input::scanChar(std::string prompt, std::string error, char check1, char check2){
+	char inChar;
+	bool success = false;
+	do{
+		std::cout << prompt;
+		std::cin.get(inChar);
+		std::cin.ignore(1000, '\n');
+		inChar = toupper(inChar);
+
+		success = (inChar == check1 || inChar == check2);
+			if(!success)
+			{
+				std::cout << error << '\n';
+			}
+	}
+	while(!success);
+
+	return inChar;
 }

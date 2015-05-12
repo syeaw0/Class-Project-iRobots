@@ -12,8 +12,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 #include "Menu.h"
 #include "Robot.h"
+#include "Testimonials.h"
 //#include "customerlist.h"
 
 class Pamphlet {
@@ -21,9 +23,10 @@ public:
 	typedef void (Pamphlet::*fptr)();
 
 	Pamphlet();
-	~Pamphlet();
+	virtual ~Pamphlet();
 
-	void menuLoop();
+	bool GetSignedIn();
+	virtual void menuLoop();
 	// the main function
 
 	//void addOption( fptr function, std::string description);
@@ -38,7 +41,7 @@ protected:
 private:
 	Robot robotInfo; // this might have to be protected for "customer" use
 	bool signedIn;
-	//vector<Testimonials> testimonials
+	Testimonials testInfo;
 
 	void initMenu();
 
@@ -51,8 +54,5 @@ private:
 	void PrintContacts();
 	void SignOut();
 };
-
-
-
 
 #endif /* PAMPHLET_H_ */

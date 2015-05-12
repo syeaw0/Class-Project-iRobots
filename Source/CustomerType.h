@@ -25,8 +25,8 @@ const int ADDRESS_COL  = 25;
 const int CITY_COL     = 15;
 const int STATE_COL    = 10;
 const int ZIPCODE_COL  = 5;
-const int INTEREST_COL = 10;
-const int DESIRE_COL   = 12;
+const int INTEREST_COL = 25;
+const int DESIRE_COL   = 20;
 const int PAMPHLET_COL = 12;
 
 // Interest: The Customer's interest level in company

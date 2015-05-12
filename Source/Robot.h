@@ -36,7 +36,7 @@ private:
 public:
 	/*METHODS*/
 	Robot();	// Default Constructor
-	~Robot();	// Destructor
+	virtual ~Robot();	// Destructor
 
 	// MUTATORS
 	void Initialize(string inputFile);	// Initializes the robots info from

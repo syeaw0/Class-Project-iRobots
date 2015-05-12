@@ -306,13 +306,13 @@ ostream& operator << (ostream      &outStream,	// IN, CALC & OUT - out stream
 	// PROCESSING - Get interest level to output
 	switch(aCustomer.interestLvl)
 	{
-		case VERY		: anInterest = "Very";
+		case VERY		: anInterest = "very interested";
 						  break;
-		case SOMEWHAT 	: anInterest = "Somewhat";
+		case SOMEWHAT 	: anInterest = "somewhat interested";
 						  break;
-		case NO		  	: anInterest = "No";
+		case NO		  	: anInterest = "not interested";
 						  break;
-		case NEVER_CALL : anInterest = "Never Call";
+		case NEVER_CALL : anInterest = "never call";
 						  break;
 		default			: break;
 	}
@@ -320,9 +320,9 @@ ostream& operator << (ostream      &outStream,	// IN, CALC & OUT - out stream
 	// PROCESSING - Get desire level to output
 	switch(aCustomer.desirability)
 	{
-		case KEY		  : aDesire = "Key";
+		case KEY		  : aDesire = "key";
 							break;
-		case NICE_TO_HAVE : aDesire = "Nice To Have";
+		case NICE_TO_HAVE : aDesire = "nice to have";
 							break;
 		default 		  :	break;
 	}
@@ -679,13 +679,13 @@ void CustomerType::Print() const
 	// PROCESSING - Get interest level to output
 	switch(interestLvl)
 	{
-		case VERY		: anInterest = "Very";
+		case VERY		: anInterest = "very interested";
 						  break;
-		case SOMEWHAT 	: anInterest = "Somewhat";
+		case SOMEWHAT 	: anInterest = "somewhat interested";
 						  break;
-		case NO		  	: anInterest = "No";
+		case NO		  	: anInterest = "not interested";
 						  break;
-		case NEVER_CALL : anInterest = "Never Call";
+		case NEVER_CALL : anInterest = "never call";
 						  break;
 		default			: break;
 	}
@@ -693,9 +693,9 @@ void CustomerType::Print() const
 	// PROCESSING - Get desire level to output
 	switch(desirability)
 	{
-		case KEY		  : aDesire = "Key";
+		case KEY		  : aDesire = "key";
 							break;
-		case NICE_TO_HAVE : aDesire = "Nice To Have";
+		case NICE_TO_HAVE : aDesire = "nice to have";
 							break;
 		default 		  :	break;
 	}
