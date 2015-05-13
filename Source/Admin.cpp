@@ -14,13 +14,14 @@ Admin::~Admin(){
 
 void Admin::initMenu(){
 	// Insertions
-	menu.insert(static_cast<Pamphlet::fptr>( &Admin::PrintCustomersByName ), 	"Print Customers By Name");
+	menu.insert(static_cast<Pamphlet::fptr>( &Admin::DeleteAccount ),			"Delete Pamphlet Account");
+	menu.insert(static_cast<Pamphlet::fptr>( &Admin::AddAccount ),				"Add Pamphlet Account");
 	menu.insert(static_cast<Pamphlet::fptr>( &Admin::PrintCustomers ), 			"Print Customers");
 	menu.insert(static_cast<Pamphlet::fptr>( &Admin::PrintKeyCustomers ), 		"Print Key Customers");
 	menu.insert(static_cast<Pamphlet::fptr>( &Admin::SaveChanges ), 			"Save Changes");
 	menu.insert(static_cast<Pamphlet::fptr>( &Admin::DeleteCustomer ), 			"Delete Customer");
 	menu.insert(static_cast<Pamphlet::fptr>( &Admin::AddCustomer ), 			"Add Customer");
-	menu.insert(static_cast<Pamphlet::fptr>( &Admin::AddGuestToBeACustomer ), "Add Guest To Become A Customer");
+	menu.insert(static_cast<Pamphlet::fptr>( &Admin::AddGuestToBeACustomer ),   "Add Guest To Become A Customer");
 	menu.insert(static_cast<Pamphlet::fptr>( &Admin::CustomerSearch ), 			"Customer Search");
 	menu.insert(static_cast<Pamphlet::fptr>( &Admin::ChangeCustomerInfo ), 		"Change Customer Info");
 	menu.insert(static_cast<Pamphlet::fptr>( &Admin::Help ), 					"Help");
@@ -59,6 +60,10 @@ void Admin::Help(){
 			"Help viewing robot guarantee policy.");
 	helpMenu.add("To read testimonials, select \"Read Testimonials\" from the main menu.",
 			"Help reading testimonials.");
+	helpMenu.add("Don't worry the program saves changes automatically.",
+			"Help I forgot to save.");
+	helpMenu.add("Customers will only be able to see positive testimonials, so you shouldn't have to worry about poor reviews.",
+				"We are getting awful testimonial ratings!");
 	helpMenu.add("You may contact us by calling 1 800 555 5555",
 			"Contact us.");
 	helpMenu.print();
@@ -191,23 +196,12 @@ void Admin::DeleteCustomer(){
 }
 void Admin::SaveChanges(){
 	printf("--Saving\n");
-
 	customers.SaveList("CustomerList.txt");
-	// customer.save
 }
 void Admin::PrintCustomers(){
 	printf("--Printing\n");
 	customers.PrintAllCustomerList();
-
-	// customers.printAll()
 }
-void Admin::PrintCustomersByName(){
-	printf("--PrintByName\n");
-	std::string inName = input::scanName();
-	customers.CustomerSearch(inName);
-	// customers.lookup(inName);
-}
-
 void Admin::PrintKeyCustomers(){
 	printf("--Printing Key Customers\n");
 	customers.PrintKeyCustomerList();
@@ -219,6 +213,42 @@ void Admin::AddGuestToBeACustomer(){
 		   "--Add Guest as a New Customer\n");
 	fileName = "ProspectiveCustomerList.txt";
 	customers.AddFromFileGuestToCust(fileName.c_str());
-
 	customers.SaveAndOpenList("CustomerList.txt");
+
+	AddAccount();
+}
+
+void Admin::AddAccount(){
+	Login 				login;			// Login class for new account
+	bool 				acctFail = true;// For new account loop
+	// Create new Login Account for customer
+	printf("\nCreate a Pamphlet Account for the New Customer\n");
+	login.InitializeInfo("LoginInfoTest.txt");
+	while(acctFail){
+		try{
+			login.NewAccount("LoginInfoTest.txt");
+			acctFail = false;
+		}
+		catch(Login::UsernameTaken&){
+			printf("User Name Is Taken\n");
+		}
+	}
+	printf("Account Created! Restart Pamphlet to Login\n");
+}
+
+void Admin::DeleteAccount(){
+	printf("--Delete\n");
+	Login login;
+
+	login.InitializeInfo("LoginInfoTest.txt");
+
+	try{
+		login.DeleteAccount("LoginInfoTest.txt");
+	}
+	catch(Login::InvalidUsername&){
+		printf("Invalid User Name\n");
+	}
+	catch(...){
+		printf("Invalid Input\n");
+	}
 }

@@ -65,6 +65,7 @@ public:
 	// MUTATORS
 	void InitializeInfo(string inputFile);	// Reads in the usernames and
 											// passwords from a file
+	void ResetInfo();						// Resets login
 	void NewAccount(string outputFile);		// Creates a new account
 											// and saves it to a file
 	void DeleteAccount(string outputFile);	// Deletes a user account
@@ -81,6 +82,7 @@ public:
 	class InvalidUsername{};	// For when the entered username is not found
 	class UsernameTaken{};		// For if a username has been taken when
 								// creating a new account
+	class Exit{};
 };
 
 #endif /* LOGIN_H_ */
