@@ -58,7 +58,9 @@ private:
 	void initMenu();
 
 	void Help();
-	void PrintRobotInfo();
+	void PrintRobotSalesPitch();
+	void PrintRobotEnvironment();
+	void PrintRobotOperations();
 	void PrintRobotOptions();
 	void PrintRobotMaintenance();
 	void PrintRobotPolicy();

@@ -7,7 +7,6 @@
  **********************************************/
 
 #include "Login.h"
-
 // Default Constructor
 Login::Login()
 {
@@ -84,6 +83,10 @@ void Login::InitializeInfo(string inputFile)
 
 	// CLOSE FILE
 	inFile.close();
+}
+
+void Login::ResetInfo(){
+	customerInfo.empty();
 }
 
 // Creates a new account for a new user.
@@ -199,6 +202,7 @@ User Login::UserLogin()const
 			"* Please enter your username and password. If you are  *\n"
 			"* a guest, simply type 'guest' as your username.       *\n"
 			"* The username and password are case sensitive.        *\n"
+			"* Enter 'EXIT' to quit                                 *\n"
 			"********************************************************\n\n";
 
 	// PROMPT THE USER FOR THEIR USERNAME
@@ -208,7 +212,10 @@ User Login::UserLogin()const
 	// - IF USERNAME IS GUEST, RETURN 'GUEST'
 	// - ELSE IF USERNAME IS NOT AN ADMIN, CHECK CUSTOMERS' USERNAMES
 	// - ELSE PROMPT USER FOR ADMIN PASSWORD
-	if(login.username == "guest")
+	if(login.username == "EXIT"){
+		throw Exit();
+	}
+	else if(login.username == "guest")
 	{
 		user = GUEST;
 	}

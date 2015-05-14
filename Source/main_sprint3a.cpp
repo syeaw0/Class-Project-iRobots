@@ -2,10 +2,12 @@
 #define MAIN_SPRINT3
 #ifdef MAIN_SPRINT3
 
-//#define DEBUG_MENU_TRACE	//
 //#define NO_LOGIN GUEST	// build with ADMIN, CUSTOMER, or GUEST to bypass login
+//#define DEBUG_MENU_TRACE	//
+
 
 #include "header.h"
+#include <stdlib.h>
 
 int main(){
 
@@ -15,12 +17,10 @@ int main(){
 	Login 	  	login;			// The login class object
 	Pamphlet*	pamphlet;		// Pointer to the base Pamphlet class
 
+	do{	// eventually replace loop
 
-
-	// VARIABLE INITIALIZATION
-	login.InitializeInfo("LoginInfoTest.txt");
-
-	while(1){	// eventually replace loop
+		// VARIABLE INITIALIZATION
+		login.InitializeInfo("LoginInfoTest.txt");
 		#ifdef NO_LOGIN
 		userType = NO_LOGIN;
 		#else
@@ -44,6 +44,9 @@ int main(){
 				cout << "*** Invalid Username ***\n";
 				invalid = true;
 			}
+			catch(Login::Exit&){
+				return 0;
+			}
 		}while(invalid);
 		#endif
 		// OPEN PAMPHLET DEPENDING ON USER TYPE
@@ -59,8 +62,9 @@ int main(){
 		}
 
 		pamphlet->menuLoop();
+		login.ResetInfo();
 
-	}
+	} while (1);
 }
 
 #endif

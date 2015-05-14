@@ -297,7 +297,9 @@ void CustomerListType::AddFromFileGuestToCust(string fileName)
 				} // END WHILE
 
 			}
-		} // END IF-ELSE
+
+	} // END IF-ELSE
+
 
 	inFile.close();
 

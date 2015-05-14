@@ -24,7 +24,9 @@ void Pamphlet::menuLoop(){
 	}
 }
 void Pamphlet::initMenu(){
-	menu.add( &Pamphlet::PrintRobotInfo,        "Print Robot Info");
+	menu.add( &Pamphlet::PrintRobotSalesPitch , "Why Should I Buy This?");
+	menu.add( &Pamphlet::PrintRobotEnvironment, "Print Robot Physical Environment");
+	menu.add( &Pamphlet::PrintRobotOperations , "Print Robot Concept of Operations");
 	menu.add( &Pamphlet::PrintRobotOptions , 	"Print Robot Options");
 	menu.add( &Pamphlet::PrintRobotMaintenance ,"Print Robot Maintenance");
 	menu.add( &Pamphlet::PrintRobotPolicy ,		"Print Robot Policy");
@@ -61,11 +63,17 @@ void Pamphlet::Help(){
 		std::cout << helpText << std::endl;
 	}
 }
-void Pamphlet::PrintRobotInfo(){
-	printf("--Print Robot Info\n");
-	WordWrap(robotInfo.GetSalesPitch(), 75, cout);
-	WordWrap(robotInfo.GetEnvironment(), 75, cout);
-	WordWrap(robotInfo.GetOperations(), 75, cout);
+void Pamphlet::PrintRobotSalesPitch(){
+	printf("--Print Robot Sales Pitch\n");
+	std::cout << robotInfo.GetSalesPitch() << std::endl;
+}
+void Pamphlet::PrintRobotEnvironment(){
+	printf("--Print Robot Environment\n");
+	std::cout << robotInfo.GetEnvironment() << std::endl;
+}
+void Pamphlet::PrintRobotOperations(){
+	printf("--Print Robot Operations\n");
+	std::cout << robotInfo.GetOperations() << std::endl;
 }
 void Pamphlet::PrintRobotOptions(){
 	printf("--Print Robot Options\n");
