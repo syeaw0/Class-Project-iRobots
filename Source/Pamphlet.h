@@ -18,6 +18,18 @@
 #include "Testimonials.h"
 //#include "customerlist.h"
 
+// PROTOTYPE FOR WORD WRAP
+
+/**************************************************
+ * WordWrap
+ * ------------------------------------------------
+ * This function wraps the text around a specified
+ * limit
+ **************************************************/
+void WordWrap(string  text, 	// IN   - The text to word wrap
+			  int     maxLen,	// CALC - The maximum characters in a line
+			  ostream &oFile);	// OUT 	- The file to output to
+
 class Pamphlet {
 public:
 	typedef void (Pamphlet::*fptr)();
@@ -56,8 +68,5 @@ private:
 	void PrintContacts();
 	void SignOut();
 };
-
-
-
 
 #endif /* PAMPHLET_H_ */

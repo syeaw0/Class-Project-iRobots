@@ -86,7 +86,6 @@ void Testimonials::AddFromFile(string fileName)
 												: (rating == "Four Stars") ? aTest.aRating = FOUR_STARS
 														: (rating == "Five Stars") ? aTest.aRating = FIVE_STARS
 																: aTest.aRating = FIVE_STARS;
-
 				testList.push_back(aTest);
 			}
 		}
