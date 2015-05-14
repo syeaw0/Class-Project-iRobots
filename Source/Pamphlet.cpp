@@ -24,6 +24,7 @@ void Pamphlet::menuLoop(){
 	}
 }
 void Pamphlet::initMenu(){
+	menu.add( &Pamphlet::PrintRobotInfo,        "Print Robot Info");
 	menu.add( &Pamphlet::PrintRobotOptions , 	"Print Robot Options");
 	menu.add( &Pamphlet::PrintRobotMaintenance ,"Print Robot Maintenance");
 	menu.add( &Pamphlet::PrintRobotPolicy ,		"Print Robot Policy");
@@ -62,19 +63,21 @@ void Pamphlet::Help(){
 }
 void Pamphlet::PrintRobotInfo(){
 	printf("--Print Robot Info\n");
-	std::cout << robotInfo.GetOptions() << std::endl;
+	WordWrap(robotInfo.GetSalesPitch(), 75, cout);
+	WordWrap(robotInfo.GetEnvironment(), 75, cout);
+	WordWrap(robotInfo.GetOperations(), 75, cout);
 }
 void Pamphlet::PrintRobotOptions(){
 	printf("--Print Robot Options\n");
-	std::cout << robotInfo.GetOptions() << std::endl;
+	WordWrap(robotInfo.GetOptions(), 75, cout);
 }
 void Pamphlet::PrintRobotMaintenance(){
 	printf("--Print Maintenance\n");
-	std::cout << robotInfo.GetMaintenance() << std::endl;
+	WordWrap(robotInfo.GetMaintenance(), 75, cout);
 }
 void Pamphlet::PrintRobotPolicy(){
 	printf("--Print Policy\n");
-	std::cout << robotInfo.GetPolicy() << std::endl;
+	WordWrap(robotInfo.GetPolicy(), 75, cout);
 }
 void Pamphlet::PrintTestimonials(){
 	printf("--Print Testimonials\n");
@@ -88,12 +91,63 @@ void Pamphlet::PrintContacts(){
 			"12 Bomb Lane\n"
 			"Mission Viejo, CA 92692");
 	printf("T: 1-800-555-5555\n");
+	cout << endl << endl;
 	//
 }
 void Pamphlet::SignOut(){
 	printf("--Sign Out\n");
 	signedIn = false;
 }
+
+/**************************************************
+ * WordWrap
+ * ------------------------------------------------
+ * This function wraps the text around a specified
+ * limit
+ * ------------------------------------------------
+ * PRE-CONDITIONS
+ * 	text	: The text to word wrap
+ * 	maxLen	: The maximum character limit in a line
+ * 	oFile	: The output file
+ *
+ * POST-CONDITIONS
+ * 	<Outputs the modified text>
+ **************************************************/
+
+void WordWrap(string  text, 	// IN   - The text to word wrap
+			  int     maxLen,	// CALC - The maximum characters in a line
+			  ostream &oFile)	// OUT 	- The file to output to
+{
+	string word;
+	string line;
+	int    textLen;
+	int    count;
+
+	textLen = text.length();
+
+	for(count = 0; count <= textLen + 1; count++)
+	{
+		if(!isspace(text[count]) && count < textLen)
+		{
+			word += text[count];
+		}
+		else
+		{
+			if(line.length() + word.length() > (unsigned int)maxLen
+			   || count == textLen + 1)
+			{
+				oFile << line << endl;
+				line.clear();
+			}
+
+			line += word + ' ';
+			word.clear();
+		}
+	}
+
+	cout << endl << endl;
+}
+
 
 
 // Guest -----------------------------------------

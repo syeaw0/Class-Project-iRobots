@@ -38,12 +38,16 @@ int input::scanIntRange(int min, int max){
 	return input;
 }
 
-int input::scanIntPrompt(std::string prompt, std::string error, int min, int max){
+int input::scanIntPrompt(std::string prompt, std::string error, int min, int max)
+{
 	int input;
 	bool success = false;
-	do{
-		std::cout << prompt;
-		if( scanf("%d", &input) == 0){
+	do
+	{
+		printf(prompt.c_str());
+
+		if( scanf("%d", &input) == 0)
+		{
 			specialFlush(stdin);
 			std::cout << error << '\n';
 			continue;

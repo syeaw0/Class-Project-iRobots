@@ -253,9 +253,6 @@ void Menu<T>::print(){	// Print menu function
 	printN(bTop, width);
 	cout << endl;
 
-	// Top Margin
-	printLines(marTop);
-
 	// Title
 	cout << bLeft;
 	printN(' ', marLeft);
@@ -273,7 +270,7 @@ void Menu<T>::print(){	// Print menu function
 	for(int index = 0; index < options.size(); index++){
 
 		// Top Space
-		printLines(linesBefore);
+//		printLines(linesBefore);
 
 		//Option
 		cout << bLeft;
@@ -286,12 +283,12 @@ void Menu<T>::print(){	// Print menu function
 		cout << bRight;
 		cout << endl;
 
-		// Bottom Space
-		printLines(linesAfter);
+//		// Bottom Space
+//		printLines(linesAfter);
 	}
 
 	// Bottom Margin
-	printLines(marBot);
+//	printLines(marBot);
 
 	// Bottom Border
 	printN(bBot, width);
