@@ -1,8 +1,10 @@
-0
-0
-0, 0 0
+28000 Marguerite Pkwy
+Mission Viejo, CA 92692
+somewhat interested
+nice to have
+, Milky 0
 very interested
-key
+nice to have
 CIA
 987 Jefferson Blvd
 Baltimore, MD 754
@@ -33,8 +35,8 @@ Los Angeles Dodgers
 Los Angeles, CA 90012
 very interested
 nice to have
-Saddleback College
-28000 Marguerite Pkwy
-Mission Viejo, CA 92692
-somewhat interested
+Pluto
+Solar System
+Not a Planet, Milky 0
+very interested
 nice to have

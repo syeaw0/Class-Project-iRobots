@@ -750,7 +750,7 @@ void CustomerListType::SaveList(string fileName) const
 		// OUTPUT - Add customer's interest level & company's desire
 		//		  - to have customer to output file
 		outFile << anInterest << endl
-				<< aDesire    << endl;
+				<< aDesire;
 
 		// PROCESSING - Get next customer in list
 		tempNode = tempNode->next;
