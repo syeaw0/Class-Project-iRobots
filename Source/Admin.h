@@ -6,6 +6,7 @@
 #include "Pamphlet.h"
 #include "CustomerListType.h"
 //#include "Customer.h"
+#include "Login.h"
 #include "input.h"
 #include <stdio.h>
 
@@ -28,8 +29,9 @@ private:
 	void AddGuestToBeACustomer();
 	void SaveChanges();
 	void PrintCustomers();
-	void PrintCustomersByName();
 	void PrintKeyCustomers();
+	void AddAccount();
+	void DeleteAccount();
 };
 
 
