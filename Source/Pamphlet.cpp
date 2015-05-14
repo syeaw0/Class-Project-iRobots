@@ -65,15 +65,15 @@ void Pamphlet::Help(){
 }
 void Pamphlet::PrintRobotSalesPitch(){
 	printf("--Print Robot Sales Pitch\n");
-	std::cout << robotInfo.GetSalesPitch() << std::endl;
+	WordWrap(robotInfo.GetSalesPitch(), 75, cout);
 }
 void Pamphlet::PrintRobotEnvironment(){
 	printf("--Print Robot Environment\n");
-	std::cout << robotInfo.GetEnvironment() << std::endl;
+	WordWrap(robotInfo.GetEnvironment(), 75, cout);
 }
 void Pamphlet::PrintRobotOperations(){
 	printf("--Print Robot Operations\n");
-	std::cout << robotInfo.GetOperations() << std::endl;
+	WordWrap(robotInfo.GetOperations(), 75, cout);
 }
 void Pamphlet::PrintRobotOptions(){
 	printf("--Print Robot Options\n");

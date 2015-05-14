@@ -139,6 +139,7 @@ istream& operator >> (istream&     inStream,	// IN, CALC & OUT - in Stream
 			invalid = true;
 			cout << "Invalid zip code: " << caughtZipCode << endl;
 		}
+		inStream.ignore(1000, '\n');
 	}while(invalid);
 
 	// PROCESSING - Get interest level & check if valid - do until valid
