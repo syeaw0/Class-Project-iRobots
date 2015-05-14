@@ -67,7 +67,4 @@ private:
 	void SignOut();
 };
 
-
-
-
 #endif /* PAMPHLET_H_ */
